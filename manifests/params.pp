@@ -14,7 +14,7 @@ class roundcube::params {
 
   #spellchecker params
   $spellcheck_engine          = 'googie'
-  $spellcheck_languages       = []
+  $spellcheck_languages       = {}
 
   #webserver params
   $apt_mirror                 = 'http://ftp.debian.org/debian'
