@@ -1,4 +1,7 @@
 class roundcube::params {
+  #apt params
+  $packagelist                = ['roundcube', 'roundcube-core', 'roundcube-plugins']
+
   #database params
   $confdir                    = '/etc/roundcube'
   $database_host              = $::fqdn

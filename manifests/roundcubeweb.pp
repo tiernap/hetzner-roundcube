@@ -1,4 +1,5 @@
 class roundcube::roundcubeweb (
+  $packagelist               = $roundcube::params::packagelist,
   $apt_mirror                = $roundcube::params::apt_mirror,
   $confdir                   = $roundcube::params::confdir,
   $database_host             = $roundcube::params::database_host,
@@ -28,8 +29,6 @@ class roundcube::roundcubeweb (
   $spellcheck_languages      = $roundcube::params::spellcheck_languages,
   $timezone                  = $roundcube::params::timezone,
   ) inherits roundcube::params {
-
-  $packagelist = ['roundcube', 'roundcube-core', 'roundcube-plugins']
 
   if $spellcheck_engine == 'aspell' {
     class { '::roundcube::spellchecker::aspell':
